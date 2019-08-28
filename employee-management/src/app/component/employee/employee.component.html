@@ -1,0 +1,17 @@
+<section class="mat-typography">
+<mat-card>
+  <mat-card-title>
+    Select an employee to view details:
+  </mat-card-title>
+  <mat-card-content>
+      <mat-list>
+          <mat-list-item *ngFor="let employee of employees" >
+              <button mat-button [routerLink]="['/employees', employee.employeeId]">{{employee.name}}</button>
+            </mat-list-item>
+      </mat-list>
+  </mat-card-content>
+</mat-card>
+
+<p></p>
+<a [routerLink]="['/employees-add']" mat-raised-button >Add Employee</a>
+</section>

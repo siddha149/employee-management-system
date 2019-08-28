@@ -1,0 +1,30 @@
+<section class="mat-typography">
+<h2 >Fill new employee details :</h2>
+<form [formGroup]="addEmployeeForm" (ngSubmit)="onSubmit(addEmployeeForm.value)">
+  <div>
+    <mat-form-field appearance="outline">
+        <mat-label>Employee Id</mat-label>
+        <input matInput id="employeeId" type="text" placeholder="Employee Id" formControlName="employeeId">
+    </mat-form-field>
+  </div>
+  <div>
+    <mat-form-field appearance="outline">
+        <mat-label>Name</mat-label>
+        <input matInput id="name" type="text" placeholder="Name" formControlName="name">
+    </mat-form-field>
+  </div>
+  <div>
+      <mat-form-field appearance="outline">
+          <mat-label>Designation</mat-label>
+          <input matInput id="designation" type="text" placeholder="Designation" formControlName="designation">
+      </mat-form-field>   
+  </div>
+  <div>
+      <mat-form-field appearance="outline">
+          <mat-label>Salary</mat-label>
+          <input matInput id="salary" type="number" placeholder="Salary" formControlName="salary">
+      </mat-form-field>
+  </div>
+  <button mat-raised-button class="button" type="submit">Add</button>
+</form>    
+</section>

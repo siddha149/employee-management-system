@@ -1,0 +1,19 @@
+<section class="mat-typography">
+<mat-card *ngIf='employee'>
+  <mat-card-title>
+      {{employee.name}}'s details
+  </mat-card-title>
+  <mat-card-content>
+      <mat-list *ngIf='employee'>
+          <mat-list-item><h3>Employee Id: {{employee.employeeId}}</h3></mat-list-item>
+          <mat-list-item>Name: {{employee.name}}</mat-list-item>
+          <mat-list-item>Designation: {{employee.designation}}</mat-list-item>
+          <mat-list-item>Salary: {{employee.salary}}</mat-list-item>
+          <a [routerLink]="['/employees-update', employee.employeeId]" mat-raised-button>Update</a>
+          <button (click)="deleteEmployee(employee.employeeId)" mat-raised-button>Delete</button>
+          <a [routerLink]="['']" mat-raised-button>Back</a>
+        </mat-list>
+  </mat-card-content>
+  </mat-card>
+
+</section>
